@@ -205,6 +205,21 @@
   }
   .brand span{color:var(--blue);}
 
+  .topbar-actions{
+    display:flex;
+    align-items:center;
+    gap:18px;
+  }
+  .topbar-phone{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:13.5px;
+    font-weight:600;
+    color:var(--ink);
+    text-decoration:none;
+    white-space:nowrap;
+  }
+  .topbar-phone:hover{color:var(--blue);}
+
   /* ---------- Hero ---------- */
   .hero{
     padding:64px 0 56px;
@@ -499,14 +514,25 @@
     section{padding:40px 0;}
     .cta-button--compact{display:none;}
   }
+
+  @media (max-width: 420px){
+    .brand{font-size:14px;}
+    .brand-tail{display:none;}
+    .topbar-actions{gap:10px;}
+    .topbar-phone{font-size:12px;}
+  }
 </style>
 </head>
 <body>
 
 <header class="topbar">
   <div class="wrap">
-    <div class="brand">McDermott <span>Drafting</span> Services</div>
-    <a href="#booking" class="cta-button cta-button--compact">Request a Free Quote</a>
+    <div class="brand">McDermott <span>Drafting</span> <span class="brand-tail">Services</span></div>
+    <div class="topbar-actions">
+      <!-- TODO: replace with your real number -->
+      <a href="tel:+353871234567" class="topbar-phone">085 836 3662</a>
+      <a href="#booking" class="cta-button cta-button--compact">Request a Free Quote</a>
+    </div>
   </div>
 </header>
 
@@ -530,42 +556,32 @@
         </defs>
         <rect width="520" height="460" fill="url(#gridDots)"/>
 
-        <!--
-          Building drawn at true scale: 7400 × 4300 mm → 296 × 172 px (ratio 1.721:1).
-          Centred horizontally in the 520 px viewBox.
-        -->
         <g transform="translate(112, 118)">
-          <!-- walls (separate segments — avoids stray close-path lines) -->
           <line x1="0" y1="0" x2="296" y2="0" stroke="#1B1D1B" stroke-width="5" stroke-linecap="square"/>
           <line x1="296" y1="0" x2="296" y2="172" stroke="#1B1D1B" stroke-width="5" stroke-linecap="square"/>
           <line x1="296" y1="172" x2="158" y2="172" stroke="#1B1D1B" stroke-width="5" stroke-linecap="square"/>
           <line x1="118" y1="172" x2="0" y2="172" stroke="#1B1D1B" stroke-width="5" stroke-linecap="square"/>
           <line x1="0" y1="172" x2="0" y2="0" stroke="#1B1D1B" stroke-width="5" stroke-linecap="square"/>
 
-          <!-- door swing, hinged at left jamb -->
           <line x1="118" y1="172" x2="118" y2="132" stroke="#1B1D1B" stroke-width="1.6"/>
           <path d="M158,172 A40,40 0 0,0 118,132" fill="none" stroke="#1B1D1B" stroke-width="1" stroke-dasharray="3 3"/>
         </g>
 
-        <!-- bottom dimension (building width) -->
         <line x1="112" y1="322" x2="408" y2="322" stroke="#2C4F9B" stroke-width="1.4"/>
         <line x1="112" y1="316" x2="112" y2="328" stroke="#2C4F9B" stroke-width="1.4"/>
         <line x1="408" y1="316" x2="408" y2="328" stroke="#2C4F9B" stroke-width="1.4"/>
         <text x="260" y="313" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="#2C4F9B">7400</text>
 
-        <!-- left dimension (building height) -->
         <line x1="84" y1="118" x2="84" y2="290" stroke="#2C4F9B" stroke-width="1.4"/>
         <line x1="78" y1="118" x2="90" y2="118" stroke="#2C4F9B" stroke-width="1.4"/>
         <line x1="78" y1="290" x2="90" y2="290" stroke="#2C4F9B" stroke-width="1.4"/>
         <text x="62" y="204" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="#2C4F9B" transform="rotate(-90 62 204)">4300</text>
 
-        <!-- north arrow -->
         <circle cx="478" cy="66" r="23" fill="none" stroke="#1B1D1B" stroke-width="1.4"/>
         <line x1="478" y1="82" x2="478" y2="52" stroke="#1B1D1B" stroke-width="1.4"/>
         <polygon points="478,44 472,56 484,56" fill="#1B1D1B"/>
         <text x="478" y="38" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#1B1D1B">N</text>
 
-        <!-- title block -->
         <line x1="330" y1="392" x2="450" y2="392" stroke="#CDD0C4" stroke-width="1"/>
         <text x="450" y="408" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="#5C5E58">EX-01 · SCALE 1:50</text>
       </svg>
@@ -586,8 +602,8 @@
       <div class="grid-3">
         <div class="benefit">
           <span class="num mono">01</span>
-          <h3>Diligence</h3>
-          <p>I measure every room on site, so you get a fresh set of drawings, no scaling from old plans, no estimates.</p>
+          <h3>Measured on Site</h3>
+          <p>I measure every room on site, so you get a fresh set of drawings, no guesswork, every dimension is measured on site.</p>
         </div>
         <div class="benefit">
           <span class="num mono">02</span>
@@ -597,7 +613,7 @@
         <div class="benefit">
           <span class="num mono">03</span>
           <h3>Professional CAD Files</h3>
-          <p>Delivered in the same format that builders or architects already work with — ready to open and quote from immediately.</p>
+          <p>Delivered in the same format that builders or architects already work with, easy to open and quote from immediately.</p>
         </div>
       </div>
     </div>
@@ -641,7 +657,7 @@
         <div class="badge" aria-hidden="true">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3z" stroke="currentColor" stroke-width="1.6"/></svg>
         </div>
-        <p>I specialize in existing-condition measured surveys, leaving you free to choose your own builder or designer without being locked into expensive design packages.</p>
+        <p>I specialise in existing-condition measured surveys, leaving you free to choose your own builder or designer without being locked into expensive design packages.</p>
       </div>
     </div>
   </section>
@@ -653,7 +669,8 @@
 
         <div class="booking-card">
           <h2>Request a Free Quote</h2>
-          <p class="sub">Fill in your details and I'll get back to you with your quote.</p>
+          <!-- TODO: replace with your real number -->
+          <p class="sub">Fill in your details and I'll get back to you with your quote — or call/text me directly on <a href="tel:+353858363662" style="text-decoration:underline;">085 836 3662</a>.</p>
 
           <div class="form-error" id="formError">
             Something went wrong sending your request. Please try again in a few minutes.
@@ -700,8 +717,41 @@
           <h2>Common Questions</h2>
 
           <div class="faq-item">
+            <h3>Do you cover my area?</h3>
+            <!-- TODO: confirm this matches your actual coverage area everywhere else on the site -->
+            <p>I cover Dublin, Wicklow and Kildare, with no hidden travel fees within that area. If you're just outside it, get in touch, I can often still help.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>How much does a measured survey cost?</h3>
+            <!-- TODO: fill in your real starting price -->
+            <p>Prices depend on the size of the property, but most single-storey surveys start from around €250.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>How long does it take, from booking to receiving my drawings?</h3>
+            <!-- TODO: fill in your real visit length and turnaround time -->
+            <p>The site visit itself usually takes 1-2 hours, and you'll have your finished CAD drawings within 2-3 working days.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Do I need to be home during the visit?</h3>
+            <p>Not at all. Many clients prefer to leave a key or arrange access so they can carry on with their day. If you’d prefer to be there to walk me through the property, that’s perfectly fine too.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Can you handle unusual or older properties?</h3>
+            <p>Definitely. Older houses, attic conversions, and homes with irregular layouts are exactly where an accurate survey makes the biggest difference. Whether it’s a period property with thick walls or a house where nothing is perfectly square, I’ll provide the precise, as-built drawings you need to get your renovation off to a solid start.</p>
+          </div>
+
+          <div class="faq-item">
             <h3>Can these drawings be used for planning applications?</h3>
             <p>Yes! Local authorities require accurate existing drawings. By getting these from me first, you save money and can hand a ready-to-go CAD file straight to your architect or planner, speeding up your application.</p>
+          </div>
+
+          <div class="faq-item">
+            <h3>Do these drawings include structural or planning advice?</h3>
+            <p>No. These surveys are for spatial and planning reference purposes only. They do not constitute a structural report or building assessment; please consult a qualified structural engineer regarding any structural changes or load-bearing concerns.</p>
           </div>
 
         </div>
@@ -714,8 +764,13 @@
 
 <footer>
   <div class="wrap">
-    <p>McDermott Drafting Services — CAD measured surveys serving homeowners across Dublin, Wicklow, and Kildare (with no hidden travel fees).</p>
-    <p class="footer-legal">McDermott Drafting Services specializes strictly in existing-condition measured surveys. I specialise purely on the measurement stage, leaving you free to choose your own builder or designer without being locked into expensive design packages. Fully insured with Professional Indemnity insurance for your peace of mind.</p>
+    <!-- TODO: replace with your real number -->
+    <p>McDermott Drafting Services — CAD measured surveys serving homeowners across Dublin, Wicklow, and Kildare (with no hidden travel fees). Call or text <a href="tel:+353858363662">085 836 3662</a>.</p>
+    <p class="footer-legal">
+      McDermott Drafting Services specialises in existing-condition measured surveys. I focus on the measurement stage, leaving you free to choose your own builder or designer. 
+      <br><br>
+      <em>Disclaimer: All measurements are taken to the face of existing finishes. While every care is taken to ensure accuracy, these drawings are for design and planning purposes; they should be verified on-site by your contractor before commencing any building works. Fully insured with Professional Indemnity insurance.</em>
+    </p>
   </div>
 </footer>
 
