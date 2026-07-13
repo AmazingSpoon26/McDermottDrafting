@@ -243,7 +243,41 @@
   max-width: 380px; /* Adjust this number to scale the drawing up or down */
   height: auto;
   justify-self: end; /* This pushes the drawing to the right */
+  }
+  /* Style the accordion container */
+.faq-item {
+  border-bottom: 1px solid #ddd; /* Keeps your original separator style */
+  padding: 15px 0;
 }
+
+/* Style the clickable header */
+.faq-item summary {
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none; /* Removes default triangle in some browsers */
+  position: relative;
+  padding-right: 20px;
+}
+
+/* Optional: Add a custom 'plus' or arrow icon */
+.faq-item summary::after {
+  content: '+';
+  position: absolute;
+  right: 0;
+  font-size: 1.2rem;
+}
+
+.faq-item[open] summary::after {
+  content: '-';
+}
+
+/* Style the answer text */
+.faq-item p {
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.6;
+}
+
 
   /* ---------- Section shell ---------- */
   section{
@@ -1370,45 +1404,42 @@
 
         <div class="faq">
           <h2>Common Questions</h2>
-
-          <div class="faq-item">
-            <h3>Do you cover my area?</h3>
-            <!-- TODO: confirm this matches your actual coverage area everywhere else on the site -->
+        
+          <!-- Repeat this structure for every FAQ -->
+          <details class="faq-item">
+            <summary>Do you cover my area?</summary>
             <p>I cover Dublin, Wicklow and Kildare, with no hidden travel fees within that area. If you're just outside it, get in touch, I can often still help.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>How much does a measured survey cost?</h3>
-            <!-- TODO: fill in your real starting price -->
+          </details>
+        
+          <details class="faq-item">
+            <summary>How much does a measured survey cost?</summary>
             <p>Prices depend on the size of the property, but a standard 2-3 bedroom, two-storey home survey typically starts from around €350 - €450.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>How long does it take, from booking to receiving my drawings?</h3>
-            <!-- TODO: fill in your real visit length and turnaround time -->
+          </details>
+        
+          <details class="faq-item">
+            <summary>How long does it take, from booking to receiving my drawings?</summary>
             <p>The site visit itself usually takes 1-2 hours, and you'll have your finished CAD drawings within 2-3 working days.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Do I need to be home during the visit?</h3>
+          </details>
+        
+          <details class="faq-item">
+            <summary>Do I need to be home during the visit?</summary>
             <p>Not at all. Many clients prefer to leave a key or arrange access so they can carry on with their day. If you’d prefer to be there to walk me through the property, that’s perfectly fine too.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Can you handle unusual or older properties?</h3>
+          </details>
+        
+          <details class="faq-item">
+            <summary>Can you handle unusual or older properties?</summary>
             <p>Definitely. Older houses, attic conversions, and homes with irregular layouts are exactly where an accurate survey makes the biggest difference. Whether it’s a period property with thick walls or a house where nothing is perfectly square, I’ll provide the precise, as-built drawings you need to get your renovation off to a solid start.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Can these drawings be used for planning applications?</h3>
+          </details>
+        
+          <details class="faq-item">
+            <summary>Can these drawings be used for planning applications?</summary>
             <p>Yes! Local authorities require accurate existing drawings. By getting these from me first, you save money and can hand a ready-to-go CAD file straight to your architect or planner, speeding up your application.</p>
-          </div>
-
-          <div class="faq-item">
-            <h3>Do these drawings include structural or planning advice?</h3>
+          </details>
+        
+          <details class="faq-item">
+            <summary>Do these drawings include structural or planning advice?</summary>
             <p>No. These surveys are for spatial and planning reference purposes only. They do not constitute a structural report or building assessment; please consult a qualified structural engineer regarding any structural changes or load-bearing concerns.</p>
-          </div>
-
+          </details>
         </div>
 
       </div>
