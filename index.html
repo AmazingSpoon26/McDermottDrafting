@@ -274,37 +274,44 @@
   justify-self: end; /* This pushes the drawing to the right */
   }
   /* Style the accordion container */
-.faq-item {
-  border-bottom: 1px solid #ddd; /* Keeps your original separator style */
-  padding: 15px 0;
-}
+  .faq-item {
+  border-bottom: 1px solid var(--line); /* Matches your site color palette */
+  padding: 14px 0;
+  }
 
-/* Style the clickable header */
-.faq-item summary {
+  .faq-item summary {
   font-weight: 600;
   cursor: pointer;
-  list-style: none; /* Removes default triangle in some browsers */
+  list-style: none; /* Removes default triangle */
   position: relative;
-  padding-right: 20px;
-}
+  padding-right: 30px;
+  color: var(--ink);
+  }
 
-/* Optional: Add a custom 'plus' or arrow icon */
-.faq-item summary::after {
+  /* Remove default webkit markers */
+  .faq-item summary::-webkit-details-marker {
+  display: none;
+  }
+
+  /* Custom +/- toggle */
+  .faq-item summary::after {
   content: '+';
   position: absolute;
-  right: 0;
+  right: 5px;
   font-size: 1.2rem;
-}
+  color: var(--muted);
+  }
 
-.faq-item[open] summary::after {
-  content: '-';
-}
+  .faq-item[open] summary::after {
+  content: '−';
+  color: var(--ink);
+  }
 
-/* Style the answer text */
-.faq-item p {
-  margin-top: 10px;
-  color: #555;
+  .faq-item p {
+  margin-top: 12px;
+  color: var(--muted);
   line-height: 1.6;
+  font-size: 0.95rem;
 }
 
   /* ---------- Section shell ---------- */
@@ -401,12 +408,22 @@
   .scope-block strong{font-weight:600;}
 
   /* ---------- Booking + FAQ ---------- */
-  .booking-grid{
-    display:grid;
-    grid-template-columns:1.15fr 0.85fr;
-    gap:48px;
-    margin-top:8px;
-    align-items:start;
+  .booking-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* Makes the form wider */
+  gap: 60px; /* Spacing between sections */
+  align-items: start;
+  }
+  .booking-card {
+  background: var(--card); /* Uses your defined --card color */
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 30px;
+  }
+  @media (max-width: 768px) {
+  .booking-grid {
+    grid-template-columns: 1fr;
+  }
   }
   .booking-card{
     background:var(--card);
