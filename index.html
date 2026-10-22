@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- SEO: Primary title — under 60 chars, optimized for your target local markets -->
-<title>Measured House Surveys Dublin, Wicklow & Kildare | CAD Drawings</title>
+<title>Measured Surveys for 45m² Extensions | Dublin, Kildare, Wicklow</title>
 
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -13,7 +13,7 @@
 <link rel="manifest" href="/site.webmanifest">
 
 <!-- SEO: Meta description — under 160 chars; targets extensions and removes inconsistencies -->
-<meta name="description" content="Get precise measured house surveys in Dublin, Wicklow & Kildare. Accurate existing-condition CAD drawings for extensions without high architectural fees.">
+<meta name="description" content="Accurate measured house surveys and existing-condition CAD drawings for 45m² extensions and granny flats in Dublin, Wicklow &amp; Kildare. Get a quote.">
 
 <!-- SEO: Canonical URL — Points safely to your core homepage -->
 <link rel="canonical" href="https://www.mcdermottdrafting.ie/">
@@ -22,8 +22,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_IE">
 <meta property="og:site_name" content="McDermott Drafting">
-<meta property="og:title" content="Measured House Surveys &amp; CAD Drawings | McDermott Drafting">
-<meta property="og:description" content="Professional, accurate measured house surveys across Dublin, Wicklow, and Kildare. Fast turnaround CAD drawings ready for your builder or architect.">
+<meta property="og:title" content="Measured Surveys for 45m² Extensions &amp; Granny Flats | McDermott Drafting">
+<meta property="og:description" content="Existing-condition CAD floor plans and elevations across Dublin, Wicklow &amp; Kildare. Ready for your builder or architect.">
 <meta property="og:url" content="https://www.mcdermottdrafting.ie/">
 <!-- OG image: add a 1200×630 px image at this path before going live -->
 <meta property="og:image" content="https://www.mcdermottdrafting.ie/images/og-share.jpg">
@@ -33,8 +33,8 @@
 
 <!-- Twitter / X card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Measured House Surveys &amp; CAD Drawings | McDermott Drafting">
-<meta name="twitter:description" content="Professional, accurate measured house surveys across Dublin, Wicklow, and Kildare. Fast turnaround CAD drawings ready for your builder or architect.">
+<meta name="twitter:title" content="Measured Surveys for 45m² Extensions &amp; Granny Flats | McDermott Drafting">
+<meta name="twitter:description" content="Existing-condition CAD floor plans and elevations across Dublin, Wicklow &amp; Kildare. Ready for your builder or architect.">
 <meta name="twitter:image" content="https://www.mcdermottdrafting.ie/images/og-share.jpg">
 
 <!-- Google tag (gtag.js) -->
@@ -1537,14 +1537,10 @@
       fetch(form.action, {
         method: 'POST',
         body: data,
-        headers: { 'Accept': 'application/json' }
-      }).then(function(response){
-        if (response.ok) {
-          form.style.display = 'none';
-          successBox.style.display = 'block';
-        } else {
-          throw new Error('Form submission failed');
-        }
+        mode: 'no-cors'
+      }).then(function(){
+        form.style.display = 'none';
+        successBox.style.display = 'block';
       }).catch(function(){
         errorBox.style.display = 'block';
         submitBtn.disabled = false;
