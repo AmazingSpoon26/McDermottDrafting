@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Measured Surveys for 45m² Extensions Kildare | McDermott Drafting</title>
-<meta name="description" content="Measured house surveys and existing-condition CAD drawings across Naas, Newbridge, Maynooth &amp; all of Kildare, ready for your 45m² extension or granny flat.">
+<title>Measured House Surveys Kildare | 45m² Extensions</title>
+<meta name="description" content="Measured house surveys and CAD drawings across Naas, Newbridge, Maynooth &amp; Kildare for 45m² extensions and granny flats. Drawings in 5–7 days. Free quote.">
 <link rel="canonical" href="https://www.mcdermottdrafting.ie/measured-surveys-kildare">
 
 <meta property="og:type" content="website">
@@ -41,7 +41,7 @@
   "name": "McDermott Drafting Kildare",
   "description": "On-site measured house surveys and drafting services serving homeowners and builders throughout County Kildare.",
   "url": "https://www.mcdermottdrafting.ie/measured-surveys-kildare",
-  "telephone": "085 836 3662",
+  "telephone": "+353858363662",
   "address": {
     "@type": "PostalAddress",
     "addressRegion": "Leinster",
@@ -50,6 +50,30 @@
   "areaServed": { "@type": "AdministrativeArea", "name": "Kildare" },
   "serviceType": ["Measured Surveys", "CAD Drafting", "Existing-Condition Drawings"],
   "priceRange": "€€"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you cover Kildare?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. I cover County Kildare, including Naas, Newbridge and Maynooth, with no hidden travel fees. Dublin and Wicklow are covered too."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to receive my completed drawings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The site survey visit usually takes 1–3 hours depending on property size. CAD floor plans are typically delivered within 5 to 7 working days following the site visit."
+      }
+    }
+  ]
 }
 </script>
 
@@ -172,6 +196,15 @@
     font-size:16.5px;
     padding:16px 24px;
   }
+  .cta-button--ghost{
+    background:transparent;
+    color:var(--ink);
+    border:1px solid var(--line);
+  }
+  .cta-button--ghost:hover{
+    background:var(--paper-alt);
+    color:var(--ink);
+  }
 
   /* ---------- Topbar ---------- */
   .topbar{
@@ -239,10 +272,16 @@
     font-size:17px;
     color:var(--muted);
     max-width:46ch;
-    margin-bottom:28px;
+    margin-bottom:24px;
+  }
+  .hero-actions{
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
   }
   .hero-note{
-    margin-top:14px;
+    margin:0;
     font-size:13px;
     color:var(--muted);
   }
@@ -548,6 +587,8 @@
     margin-top:6px;
   }
 
+  .mobile-cta{display:none;}
+
   /* ---------- Mobile ---------- */
   @media (max-width: 860px){
     .hero .wrap{grid-template-columns:1fr; gap:36px;}
@@ -558,6 +599,25 @@
     .booking-card{padding:24px;}
     section{padding:40px 0;}
     .cta-button--compact{display:none;}
+    .mobile-cta{
+      display:flex;
+      position:fixed;
+      left:0;
+      right:0;
+      bottom:0;
+      z-index:60;
+      gap:10px;
+      padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+      background:rgba(239,241,236,0.96);
+      border-top:1px solid var(--line);
+      box-shadow:0 -8px 24px rgba(27,29,27,0.06);
+    }
+    .mobile-cta .cta-button{
+      flex:1;
+      justify-content:center;
+      font-size:15px;
+      padding:14px 16px;
+    }
   }
 
   @media (max-width: 420px){
@@ -591,10 +651,13 @@
   <section class="hero" style="border-top:none;">
     <div class="wrap">
       <div>
-        <div class="hero-eyebrow mono">Survey Drawings · Irish Homeowners</div>
-        <h1>Get Precise Survey Drawings Without High Architectural Design Fees</h1>
-        <p class="sub">I provide accurate, existing-condition survey drawings, focusing strictly on accurately measured layouts, saving you from paying for design services you don't need.</p>
-        <a href="#booking" class="cta-button cta-button--large">Request a Free Quote</a>
+        <div class="hero-eyebrow mono">Measured Surveys · County Kildare</div>
+        <h1>Measured Survey Drawings for Kildare Extensions &amp; Granny Flats</h1>
+        <p class="sub">Existing-condition CAD floor plans for 45m² extensions across Kildare — Naas, Newbridge, Maynooth and nearby towns. Measured on site, without paying for design you don’t need.</p>
+        <div class="hero-actions">
+          <a href="#booking" class="cta-button cta-button--large">Request a Free Quote</a>
+          <p class="hero-note">No travel fees in Kildare · Drawings typically in 5–7 working days</p>
+        </div>
       </div>
 
       <svg class="hero-art" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" width="289.96357" height="313.27183" viewBox="0 0 289.96357 313.27183">
@@ -1386,7 +1449,7 @@
         <div class="booking-card">
           <h2>Request a Free Quote</h2>
           <!-- TODO: replace with your real number -->
-          <p class="sub">Fill in your details and I'll get back to you with your quote — or call/text me directly on <a href="tel:+353858363662" style="text-decoration:underline;">085 836 3662</a>.</p>
+          <p class="sub">Name and a contact number is enough to start. I’ll reply with your quote — or call, text or WhatsApp <a href="tel:+353858363662" style="text-decoration:underline;">085 836 3662</a>.</p>
 
           <div class="form-error" id="formError">
             Something went wrong sending your request. Please try again in a few minutes.
@@ -1394,6 +1457,7 @@
 
           <form id="bookingForm" action="https://script.google.com/macros/s/AKfycbyuVIw-TCAvnzirsUlKOzgX0wK0Qis1EulUoho2U3hnK78wsh0Mjc6lw1nqOXooC5Jo/exec" method="POST">
             <input type="hidden" name="_subject" value="New Site Measurement Request — McDermott Drafting Services">
+            <input type="hidden" name="source" value="Kildare">
             <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
             <div class="field">
@@ -1407,8 +1471,8 @@
             </div>
 
             <div class="field">
-              <label for="address">Property Address / Eircode</label>
-              <input type="text" id="address" name="address" required autocomplete="street-address">
+              <label for="address">Town or Eircode <span class="optional-tag">(optional)</span></label>
+              <input type="text" id="address" name="address" placeholder="Enough to confirm I cover the area" autocomplete="street-address">
             </div>
 
             <div class="field">
@@ -1417,7 +1481,7 @@
             </div>
 
             <button type="submit" class="cta-button cta-button--full" id="submitBtn">Request a Free Quote</button>
-            <div class="form-foot">Your details are only used to prepare your quote.</div>
+            <div class="form-foot">No obligation. Your details are only used to prepare your quote.</div>
           </form>
 
           <div class="form-success" id="formSuccess">
@@ -1434,8 +1498,8 @@
         
           <!-- Repeat this structure for every FAQ -->
           <details class="faq-item">
-            <summary>Do you cover my area?</summary>
-            <p>I cover Dublin, Wicklow and Kildare, with no hidden travel fees within that area. If you're just outside it, get in touch, I can often still help.</p>
+            <summary>Do you cover Kildare?</summary>
+            <p>Yes. I cover County Kildare, including Naas, Newbridge and Maynooth, with no hidden travel fees. Dublin and Wicklow are covered too.</p>
           </details>
         
           <details class="faq-item">
@@ -1479,8 +1543,22 @@
       <br><br>
       <em>Disclaimer: All measurements are taken to the face of existing finishes. While every care is taken to ensure accuracy, these drawings are for design and planning purposes; they should be verified on-site by your contractor before commencing any building works.</em>
     </p>
+
+    <div class="footer-legal" style="margin-top: 15px; border-top: 1px solid var(--line); padding-top: 15px; flex-basis: 100%;">
+      <strong style="display: block; margin-bottom: 8px; color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;">Areas Served:</strong>
+      <a href="/" style="margin-right: 15px;">All Areas</a>
+      <a href="/measured-surveys-dublin" style="margin-right: 15px;">Dublin Surveys</a>
+      <a href="/measured-surveys-wicklow" style="margin-right: 15px;">Wicklow Surveys</a>
+      <a href="/measured-surveys-kildare">Kildare Surveys</a>
+    </div>
   </div>
 </footer>
+
+<nav class="mobile-cta" aria-label="Get a quote">
+  <a href="tel:+353858363662" class="cta-button cta-button--ghost">Call</a>
+  <a href="https://wa.me/353858363662" class="cta-button cta-button--ghost">WhatsApp</a>
+  <a href="#booking" class="cta-button">Get a Quote</a>
+</nav>
 
 <script>
   (function(){
@@ -1500,13 +1578,15 @@
       fetch(form.action, {
         method: 'POST',
         body: data,
-        headers: { 'Accept': 'application/json' }
-      }).then(function(response){
-        if (response.ok) {
-          form.style.display = 'none';
-          successBox.style.display = 'block';
-        } else {
-          throw new Error('Form submission failed');
+        mode: 'no-cors'
+      }).then(function(){
+        form.style.display = 'none';
+        successBox.style.display = 'block';
+        if (typeof gtag === 'function') {
+          gtag('event', 'generate_lead', {
+            event_category: 'form',
+            event_label: 'kildare_quote'
+          });
         }
       }).catch(function(){
         errorBox.style.display = 'block';
