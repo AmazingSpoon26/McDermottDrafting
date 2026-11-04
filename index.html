@@ -171,7 +171,7 @@
   }
 
   *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;scroll-padding-top:80px;}
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
     *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
@@ -586,8 +586,11 @@
   }
 
   .faq h2{
-    font-size:20px;
+    font-size:22px;
     margin-bottom:20px;
+  }
+  @media (min-width: 861px){
+    .faq{padding-top:33px;}
   }
   .faq-item{
     padding:18px 0;
