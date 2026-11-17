@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="320" viewBox="0 0 300 320">
+  <rect x="0.5" y="0.5" width="299" height="319" fill="#F7F7F3" stroke="#1B1D1B" stroke-width="1"/>
+
+  <!-- grid -->
+  <g stroke="#2C4F9B" stroke-width="0.6" stroke-dasharray="2 4" opacity="0.45">
+    <line x1="100" y1="1" x2="100" y2="319"/>
+    <line x1="200" y1="1" x2="200" y2="319"/>
+    <line x1="1" y1="107" x2="299" y2="107"/>
+    <line x1="1" y1="240" x2="299" y2="240"/>
+  </g>
+
+
+  <!-- road -->
+  <g stroke="#1B1D1B" stroke-width="1" fill="none">
+    <path d="M1 252 H299"/>
+    <path d="M1 282 H299"/>
+  </g>
+  <path d="M1 267 H299" stroke="#1B1D1B" stroke-width="0.6" stroke-dasharray="8 6" opacity="0.5"/>
+
+  <!-- plot boundaries -->
+  <g stroke="#1B1D1B" stroke-width="1" fill="none">
+    <path d="M20 252 V40 H280 V252"/>
+    <path d="M85 252 V40"/>
+    <path d="M150 252 V40"/>
+    <path d="M215 252 V40"/>
+    <path d="M20 40 V12 M280 40 V12"/>
+  </g>
+
+  <!-- houses -->
+  <g stroke="#1B1D1B" stroke-width="1" fill="#E3E4DE">
+    <rect x="30" y="170" width="45" height="56"/>
+    <rect x="95" y="170" width="45" height="56"/>
+    <rect x="160" y="170" width="45" height="56"/>
+    <rect x="225" y="170" width="45" height="56"/>
+    <rect x="160" y="150" width="28" height="20"/>
+    <rect x="110" y="70" width="22" height="18"/>
+  </g>
+
+  <!-- subject property -->
+  <path d="M150 252 V40 H215 V252 Z" fill="#C8332B" fill-opacity="0.07" stroke="#C8332B" stroke-width="3" stroke-linejoin="round"/>
+
+  <g stroke="#2C4F9B" stroke-width="1.2">
+    <line x1="94" y1="240" x2="106" y2="240"/><line x1="100" y1="234" x2="100" y2="246"/>
+    <line x1="194" y1="107" x2="206" y2="107"/><line x1="200" y1="101" x2="200" y2="113"/>
+  </g>
+
+  <!-- north point -->
+  <g transform="translate(258 78)">
+    <path d="M0 -20 L7 8 L0 3 L-7 8 Z" fill="#1B1D1B"/>
+    <text x="0" y="-25" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" font-weight="600" fill="#1B1D1B">N</text>
+  </g>
+
+  <!-- scale -->
+  <g font-family="IBM Plex Mono, monospace" font-size="10" fill="#1B1D1B">
+    <g stroke="#1B1D1B" stroke-width="1">
+      <path d="M20 302 H80 M20 298 V306 M50 300 V304 M80 298 V306"/>
+    </g>
+    <text x="88" y="306">1:1000</text>
+    <text x="280" y="306" text-anchor="end" fill="#2C4F9B">ITM</text>
+  </g>
+</svg>
