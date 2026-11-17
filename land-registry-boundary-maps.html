@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Land Registry Boundary Maps Dublin, Wicklow &amp; Kildare</title>
-<meta name="description" content="Land Registry boundary maps and deed maps on Ordnance Survey mapping, prepared to Tailte Éireann requirements, for property sales and registrations in Dublin, Wicklow &amp; Kildare.">
+<meta name="description" content="Land Registry boundary maps and deed maps on Ordnance Survey mapping, prepared to Tailte Éireann requirements, in Dublin, Wicklow &amp; Kildare. From €195, mapping fee included.">
 <link rel="canonical" href="https://www.mcdermottdrafting.ie/land-registry-boundary-maps/">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -64,7 +64,12 @@
       "@type": "AdministrativeArea",
       "name": "Kildare"
     }
-  ]
+  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "priceCurrency": "EUR",
+    "lowPrice": "195"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -72,6 +77,14 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does a Land Registry map cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A map for a house or site with one boundary starts from €195, a map for splitting a property from €245, and farmland or several parcels from €295. The Ordnance Survey mapping fee is included, and you’ll get a fixed quote before any work starts."
+      }
+    },
     {
       "@type": "Question",
       "name": "How quickly can I get my map?",
@@ -117,7 +130,7 @@
       "name": "Is the Ordnance Survey mapping included in the price?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Your quote will show the full cost, including any Ordnance Survey mapping fees."
+        "text": "Yes. The Ordnance Survey mapping fee is included in every price, so there’s nothing extra to pay Tailte Éireann for the base map."
       }
     }
   ]
@@ -632,6 +645,17 @@
   .mobile-cta{display:none;}
 
   .brand{text-decoration:none;color:var(--ink);}
+  .price-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;align-items:start;}
+  .price-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;}
+  .price-card h3{font-size:17px;margin-bottom:10px;}
+  .price-list{list-style:none;margin:0;padding:0;}
+  .price-list li{display:flex;justify-content:space-between;gap:16px;padding:11px 0;border-top:1px solid var(--line);font-size:15px;}
+  .price-list li:first-child{border-top:none;}
+  .price-list .price{color:var(--blue);font-weight:600;white-space:nowrap;}
+  .price-card p{font-size:14.5px;color:var(--muted);margin:0 0 10px;}
+  .price-card p:last-child{margin-bottom:0;}
+  .price-note{max-width:68ch;margin:20px 0 22px;font-size:14.5px;color:var(--muted);}
+  @media (max-width: 860px){.price-grid{grid-template-columns:1fr;}.price-card{padding:20px;}}
   .prose{max-width:68ch;}
   .map-spec{margin:0 0 14px;padding-left:20px;color:var(--muted);font-size:15.5px;}
   .map-spec li{margin:0 0 10px;padding-left:4px;}
@@ -846,6 +870,36 @@
     </div>
   </section>
 
+  <section id="pricing">
+    <div class="wrap">
+      <div class="dim-divider">
+        <div class="tick"></div>
+        <div class="rule"></div>
+        <h2 class="label mono">Prices</h2>
+        <div class="rule"></div>
+        <div class="tick"></div>
+      </div>
+
+      <div class="price-grid">
+        <div class="price-card">
+          <h3>Land Registry boundary maps</h3>
+          <ul class="price-list">
+            <li><span>House or site, one boundary</span><span class="price mono">from €195</span></li>
+            <li><span>Splitting a property or selling part of a site</span><span class="price mono">from €245</span></li>
+            <li><span>Farmland or several parcels</span><span class="price mono">from €295</span></li>
+          </ul>
+        </div>
+        <div class="price-card">
+          <h3>Included in every price</h3>
+          <p>The Ordnance Survey mapping fee, the finished PDF sized for A3 or A4, and one round of changes if your solicitor asks for any.</p>
+          <p>No hidden extras. You get a fixed quote, with a delivery date, before any work starts.</p>
+        </div>
+      </div>
+      <p class="price-note">Your final price depends on the size of the property and how many boundaries or colours the map needs. Splitting maps usually show the whole property and the part being sold.</p>
+      <a href="#booking" class="cta-button cta-button--large">Request a Map Quote</a>
+    </div>
+  </section>
+
   <section id="scope-trust">
     <div class="wrap">
       <div class="scope-block">
@@ -923,6 +977,11 @@
           <h2>Common Questions</h2>
 
           <details class="faq-item">
+            <summary>How much does a Land Registry map cost?</summary>
+            <p>A map for a house or site with one boundary starts from €195, a map for splitting a property from €245, and farmland or several parcels from €295. The Ordnance Survey mapping fee is included, and you’ll get a fixed quote before any work starts.</p>
+          </details>
+
+          <details class="faq-item">
             <summary>How quickly can I get my map?</summary>
             <p>It depends on the property and the map you need. Your quote will include a delivery date.</p>
           </details>
@@ -949,7 +1008,7 @@
 
           <details class="faq-item">
             <summary>Is the Ordnance Survey mapping included in the price?</summary>
-            <p>Your quote will show the full cost, including any Ordnance Survey mapping fees.</p>
+            <p>Yes. The Ordnance Survey mapping fee is included in every price, so there’s nothing extra to pay Tailte Éireann for the base map.</p>
           </details>
         </div>
 
